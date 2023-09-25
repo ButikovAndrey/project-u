@@ -4,7 +4,7 @@ import {useTheme} from "shared/providers/themeProvider";
 import {AppRouter} from "app/provider/router";
 import {NavBar} from "widgets/NavBar";
 import {SideBar} from "widgets/SideBar";
-
+import {Suspense} from "react";
 
 export const App = () => {
 
@@ -12,12 +12,13 @@ export const App = () => {
 
     return (
         <div className={classNames('app', [theme])}>
-            <NavBar/>
-            <div className='content_page'>
-                <SideBar/>
-                <AppRouter/>
-            </div>
-
+            <Suspense fallback=''>
+                <NavBar/>
+                <div className='content_page'>
+                    <SideBar/>
+                    <AppRouter/>
+                </div>
+            </Suspense>
         </div>
     )
 }

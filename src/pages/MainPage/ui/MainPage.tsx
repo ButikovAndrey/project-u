@@ -1,6 +1,11 @@
+import {useTranslation} from "react-i18next";
+
 const MainPage = () => {
+
+    const {t} = useTranslation('navBar');
+
     return (
-        <h1>MainPage</h1>
+        <h1>{t('Main Page')}</h1>
     );
 };
 
