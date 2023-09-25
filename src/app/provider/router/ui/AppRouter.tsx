@@ -1,6 +1,7 @@
 import React, {Suspense} from 'react';
 import {Route, Routes} from "react-router-dom";
 import {routeConfig} from "shared/config/routeConfig/routeConfig";
+import styles from "./AppRouter.module.scss";
 
 const AppRouter = () => {
     return (
@@ -10,7 +11,11 @@ const AppRouter = () => {
                     (<Route
                         key={path}
                         path={path}
-                        element={element} />
+                        element={(
+                            <div className={styles.AppRouter}>
+                                {element}
+                            </div>
+                        )} />
                     ))}
             </Routes>
         </Suspense>

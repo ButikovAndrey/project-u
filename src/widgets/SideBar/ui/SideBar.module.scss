@@ -1,0 +1,39 @@
+.SideBar {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--bg-color-inverted);
+  position: relative;
+  transition: width 0.5s;
+}
+
+.collapsed {
+ width: var(--sidebar-width-collapsed);
+}
+
+.sidebarMenuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.toggleButton {
+  height: 100%;
+  width: 30px;
+  color: var(--primary-color-inverted);
+  background: none;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  transition: .5s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-color);
+    box-shadow: inset 1px 1px 10em 14px var(--bg-color);
+  }
+}
