@@ -83,6 +83,6 @@
     "quotes": "off",
     "curly": "off",
     "import/no-cycle": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
   }
 }
