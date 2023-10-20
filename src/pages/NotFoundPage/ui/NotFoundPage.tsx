@@ -8,7 +8,7 @@ interface NotFoundPageProps {
 }
 
 export const NotFoundPage = ({ className }: NotFoundPageProps) => {
-  const { t } = useTranslation('navBar');
+  const { t } = useTranslation('errPages');
 
     return (
       <div className={classNames(styles.NotFoundPage, [className])}>

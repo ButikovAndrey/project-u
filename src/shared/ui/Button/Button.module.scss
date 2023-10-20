@@ -1,5 +1,8 @@
 .Button {
-  background: none;
   border: none;
   cursor: pointer;
+  background-color: var(--bg-color-inverted);
+  color: var(--primary-color-inverted);
+  border-radius: 25px;
+  padding: 10px;
 }

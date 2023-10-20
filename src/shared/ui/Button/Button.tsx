@@ -2,8 +2,11 @@ import React, { ButtonHTMLAttributes } from "react";
 import classNames from "classnames";
 import styles from "./Button.module.scss";
 
+type Design = "common" | "custom";
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
+  design?: Design
 }
 
 export const Button = ({
